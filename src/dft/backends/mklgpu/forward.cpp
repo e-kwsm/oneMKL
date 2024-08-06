@@ -58,7 +58,7 @@ inline auto compute_forward(dft::detail::descriptor<prec, dom>& desc, ArgTs&&...
     auto commit_handle = dft::detail::get_commit(desc);
     if (commit_handle == nullptr || commit_handle->get_backend() != backend::mklgpu) {
         throw math::invalid_argument("DFT", "compute_forward",
-                                     "DFT descriptor has not been commited for MKLGPU");
+                                     "DFT descriptor has not been committed for MKLGPU");
     }
     auto handle = reinterpret_cast<handle_t*>(commit_handle->get_handle());
     auto mklgpu_desc = handle->first; // First because forward DFT.

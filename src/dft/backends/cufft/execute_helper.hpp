@@ -48,7 +48,7 @@ inline dft::detail::commit_impl<prec, dom>* checked_get_commit(
     auto commit_handle = dft::detail::get_commit(desc);
     if (commit_handle == nullptr || commit_handle->get_backend() != backend::cufft) {
         throw math::invalid_argument("dft/backends/cufft", "get_commit",
-                                     "DFT descriptor has not been commited for cuFFT");
+                                     "DFT descriptor has not been committed for cuFFT");
     }
     return commit_handle;
 }

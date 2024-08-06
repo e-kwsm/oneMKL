@@ -36,7 +36,7 @@ inline dft::detail::commit_impl<prec, dom>* checked_get_commit(
     auto commit_handle = dft::detail::get_commit(desc);
     if (commit_handle == nullptr || commit_handle->get_backend() != backend::portfft) {
         throw math::invalid_argument("dft/backends/portfft", "get_commit",
-                                     "DFT descriptor has not been commited for portFFT");
+                                     "DFT descriptor has not been committed for portFFT");
     }
     return commit_handle;
 }

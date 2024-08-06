@@ -48,7 +48,7 @@ inline dft::detail::commit_impl<prec, dom>* checked_get_commit(
     auto commit_handle = dft::detail::get_commit(desc);
     if (commit_handle == nullptr || commit_handle->get_backend() != backend::rocfft) {
         throw math::invalid_argument("dft/backends/rocfft", "get_commit",
-                                     "DFT descriptor has not been commited for rocFFT");
+                                     "DFT descriptor has not been committed for rocFFT");
     }
     return commit_handle;
 }
