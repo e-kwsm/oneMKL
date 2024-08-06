@@ -556,7 +556,7 @@ if(GNU_C_COMPILER OR GNU_Fortran_COMPILER)
   list(APPEND MKL_F_COPT   -m64)
 endif()
 
-# Additonal compiler & linker options
+# Additional compiler & linker options
 if(SYCL_COMPILER)
   list(APPEND MKL_SYCL_COPT "-fsycl")
   list(APPEND MKL_SYCL_LOPT "-fsycl")
