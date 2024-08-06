@@ -285,7 +285,7 @@ TEST_P(WorkspaceExternalTests, ThrowOnBadCalls) {
     descriptor<precision::SINGLE, domain::COMPLEX> desc_usm(dft_len), desc_buf(dft_len);
     desc_usm.set_value(config_param::WORKSPACE_PLACEMENT, config_value::WORKSPACE_EXTERNAL);
     desc_buf.set_value(config_param::WORKSPACE_PLACEMENT, config_value::WORKSPACE_EXTERNAL);
-    // We expect the following to throw because the decriptor has not been committed.
+    // We expect the following to throw because the descriptor has not been committed.
     std::int64_t workspace_bytes = -10;
     float* usm_workspace = nullptr;
     EXPECT_THROW(desc_usm.get_value(config_param::WORKSPACE_EXTERNAL_BYTES, &workspace_bytes),

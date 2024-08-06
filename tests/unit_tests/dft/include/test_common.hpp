@@ -124,7 +124,7 @@ inline t rand_scalar() {
         return t(std::rand()) / t(RAND_MAX) - t(0.5);
     }
     else {
-        static_assert(complex_info<t>::is_complex, "unexpect type in rand_scalar");
+        static_assert(complex_info<t>::is_complex, "unexpected type in rand_scalar");
         using fp = typename complex_info<t>::real_type;
         return t(rand_scalar<fp>(), rand_scalar<fp>());
     }

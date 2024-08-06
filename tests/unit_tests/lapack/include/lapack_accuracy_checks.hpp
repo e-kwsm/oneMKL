@@ -487,7 +487,7 @@ bool check_potrf_accuracy(const std::vector<fp>& init, const std::vector<fp>& so
         }
     }
     if (!result)
-        test_log::lout << "Tolerance exceded, max_error = " << max_error << std::endl;
+        test_log::lout << "Tolerance exceeded, max_error = " << max_error << std::endl;
 
     return result;
 }

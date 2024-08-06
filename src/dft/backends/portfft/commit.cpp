@@ -150,8 +150,8 @@ public:
         return committed_descriptors.data();
     }
 
-    // All the compute functions are implementated here so they are in the same translation unit as the commit function.
-    // If the use of the kernel bundle is in a seperate translation unit from the one it was translated in, the runtime can fail to find it.
+    // All the compute functions are implemented here so they are in the same translation unit as the commit function.
+    // If the use of the kernel bundle is in a separate translation unit from the one it was translated in, the runtime can fail to find it.
 
     // forward inplace COMPLEX_COMPLEX
     void forward_ip_cc(descriptor_type& desc, sycl::buffer<fwd_type, 1>& inout) override {

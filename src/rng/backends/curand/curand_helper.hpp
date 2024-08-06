@@ -298,7 +298,7 @@ inline sycl::event range_transform_int(sycl::queue& queue, T a, T b, std::int64_
 //
 // Input arguments:
 //      queue - the queue to submit the kernel to
-//      p     - success probablity of a trial
+//      p     - success probability of a trial
 //      in    - buffer containing uniformly-generated random numbers
 //      out   - buffer to store Bernoulli
 template <typename T>

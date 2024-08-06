@@ -110,7 +110,7 @@ public:
         ROCRAND_CALL(rocrand_create_generator, status, &engine_, ROCRAND_RNG_PSEUDO_MRG32K3A);
         ROCRAND_CALL(rocrand_set_seed, status, engine_, (unsigned long long)seed_);
 
-        // Allign this->engine_'s offset state with other->engine_'s offset
+        // Align this->engine_'s offset state with other->engine_'s offset
         skip_ahead(offset_);
     }
 

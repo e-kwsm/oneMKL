@@ -478,7 +478,7 @@ public:
         return { offset_bwd_in, offset_bwd_out };
     }
 
-    /** Get the requried worspace size for a rocfft plan. Implementation to be shared by internal and external workspace mechanisms.
+    /** Get the required worspace size for a rocfft plan. Implementation to be shared by internal and external workspace mechanisms.
 
      * @param handle rocfft_handle. Expected to have valid rocfft_plan.
      * @param function The name of the function to give when generating exceptions

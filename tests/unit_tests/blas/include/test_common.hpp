@@ -656,7 +656,7 @@ bool check_equal_trsm_matrix(acc1& M, acc2& M_ref, oneapi::math::layout layout, 
     return good;
 }
 
-// Helper for using std::result_of for evalutation operator[] return type
+// Helper for using std::result_of for evaluation operator[] return type
 template <typename T>
 struct access_index {
     auto operator()(T M) {

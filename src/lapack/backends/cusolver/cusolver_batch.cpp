@@ -677,7 +677,7 @@ inline sycl::event getrf_batch(const char* func_name, Func func, sycl::queue& qu
                          [=](sycl::id<1> index) { ipiv[index] = ipiv32[index]; });
     });
 
-    // Enqueue free memory, don't return event as not-neccessary for user to wait for ipiv32 being released
+    // Enqueue free memory, don't return event as not-necessary for user to wait for ipiv32 being released
     queue.submit([&](sycl::handler& cgh) {
         cgh.depends_on(done_casting);
         cgh.host_task([=](sycl::interop_handle ih) { sycl::free(ipiv32, queue); });
