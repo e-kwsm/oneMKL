@@ -44,7 +44,7 @@ inline void check_bwd_commit(dft::descriptor<prec, dom>& desc) {
     auto commit_handle = dft::detail::get_commit(desc);
     if (commit_handle == nullptr || commit_handle->get_backend() != backend::mklcpu) {
         throw math::invalid_argument("DFT", "computer_backward",
-                                     "DFT descriptor has not been commited for MKLCPU");
+                                     "DFT descriptor has not been committed for MKLCPU");
     }
 
     auto mklcpu_desc = reinterpret_cast<detail::mklcpu_desc_t*>(commit_handle->get_handle());
