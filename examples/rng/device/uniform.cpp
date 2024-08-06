@@ -22,7 +22,7 @@
 *  Content:
 *       This example demonstrates usage of oneapi::math::rng::device::mcg59
 *       random number generator to produce random
-*       numbers using unifrom distribution on a SYCL device (CPU, GPU).
+*       numbers using uniform distribution on a SYCL device (CPU, GPU).
 *
 *******************************************************************************/
 
