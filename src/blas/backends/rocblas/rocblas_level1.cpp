@@ -57,7 +57,7 @@ inline void asum(Func func, sycl::queue& queue, int64_t n, sycl::buffer<T1, 1>& 
             // ASUM does not support negative index
             rocblas_native_func(func, err, handle, n, x_, std::abs(incx), res_);
             // Higher level BLAS functions expect rocblas_pointer_mode_host
-            // to be set, therfore we need to reset this to the default value
+            // to be set, therefore we need to reset this to the default value
             // in order to avoid invalid memory accesses
             rocblas_set_pointer_mode(handle, rocblas_pointer_mode_host);
         });
@@ -191,7 +191,7 @@ inline void rotg(Func func, sycl::queue& queue, sycl::buffer<T1, 1>& a, sycl::bu
             rocblas_status err;
             rocblas_native_func(func, err, handle, a_, b_, c_, s_);
             // Higher level BLAS functions expect rocblas_pointer_mode_host
-            // to be set, therfore we need to reset this to the default value
+            // to be set, therefore we need to reset this to the default value
             // in order to avoid invalid memory accesses
             rocblas_set_pointer_mode(handle, rocblas_pointer_mode_host);
         });
@@ -236,7 +236,7 @@ inline void rotm(Func func, sycl::queue& queue, int64_t n, sycl::buffer<T, 1>& x
             rocblas_status err;
             rocblas_native_func(func, err, handle, n, x_, incx, y_, incy, param_);
             // Higher level BLAS functions expect rocblas_pointer_mode_host
-            // to be set, therfore we need to reset this to the default value
+            // to be set, therefore we need to reset this to the default value
             // in order to avoid invalid memory accesses
             rocblas_set_pointer_mode(handle, rocblas_pointer_mode_host);
         });
@@ -312,7 +312,7 @@ inline void dot(Func func, sycl::queue& queue, int64_t n, sycl::buffer<T, 1>& x,
             rocblas_status err;
             rocblas_native_func(func, err, handle, n, x_, incx, y_, incy, res_);
             // Higher level BLAS functions expect rocblas_pointer_mode_host
-            // to be set, therfore we need to reset this to the default value
+            // to be set, therefore we need to reset this to the default value
             // in order to avoid invalid memory accesses
             rocblas_set_pointer_mode(handle, rocblas_pointer_mode_host);
         });
@@ -404,7 +404,7 @@ void sdsdot(sycl::queue& queue, int64_t n, float sb, sycl::buffer<float, 1>& x, 
             rocblas_status err;
             rocblas_native_func(rocblas_sdot, err, handle, n, x_, incx, y_, incy, res_);
             // Higher level BLAS functions expect rocblas_pointer_mode_host
-            // to be set, therfore we need to reset this to the default value
+            // to be set, therefore we need to reset this to the default value
             // in order to avoid invalid memory accesses
             rocblas_set_pointer_mode(handle, rocblas_pointer_mode_host);
         });
@@ -444,7 +444,7 @@ inline void rotmg(Func func, sycl::queue& queue, sycl::buffer<T, 1>& d1, sycl::b
             rocblas_status err;
             rocblas_native_func(func, err, handle, d1_, d2_, x1_, y1_, param_);
             // Higher level BLAS functions expect rocblas_pointer_mode_host
-            // to be set, therfore we need to reset this to the default value
+            // to be set, therefore we need to reset this to the default value
             // in order to avoid invalid memory accesses
             rocblas_set_pointer_mode(handle, rocblas_pointer_mode_host);
         });
@@ -496,7 +496,7 @@ inline void iamax(Func func, sycl::queue& queue, int64_t n, sycl::buffer<T, 1>& 
             // reference netlib BLAS.
             rocblas_native_func(func, err, handle, n, x_, incx, int_res_);
             // Higher level BLAS functions expect rocblas_pointer_mode_host
-            // to be set, therfore we need to reset this to the default value
+            // to be set, therefore we need to reset this to the default value
             // in order to avoid invalid memory accesses
             rocblas_set_pointer_mode(handle, rocblas_pointer_mode_host);
         });
@@ -593,7 +593,7 @@ inline void iamin(Func func, sycl::queue& queue, int64_t n, sycl::buffer<T, 1>& 
             // implemented as a reference IAMIN.
             rocblas_native_func(func, err, handle, n, x_, incx, int_res_);
             // Higher level BLAS functions expect rocblas_pointer_mode_host
-            // to be set, therfore we need to reset this to the default value
+            // to be set, therefore we need to reset this to the default value
             // in order to avoid invalid memory accesses
             rocblas_set_pointer_mode(handle, rocblas_pointer_mode_host);
         });
@@ -648,7 +648,7 @@ inline void nrm2(Func func, sycl::queue& queue, int64_t n, sycl::buffer<T1, 1>& 
             // NRM2 does not support negative index
             rocblas_native_func(func, err, handle, n, x_, std::abs(incx), res_);
             // Higher level BLAS functions expect rocblas_pointer_mode_host
-            // to be set, therfore we need to reset this to the default value
+            // to be set, therefore we need to reset this to the default value
             // in order to avoid invalid memory accesses
             rocblas_set_pointer_mode(handle, rocblas_pointer_mode_host);
         });
