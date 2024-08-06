@@ -55,7 +55,7 @@ inline void asum(const char* func_name, Func func, sycl::queue& queue, int64_t n
             // ASUM does not support negative index
             cublas_native_named_func(func_name, func, err, handle, n, x_, std::abs(incx), res_);
             // Higher level BLAS functions expect CUBLAS_POINTER_MODE_HOST
-            // to be set, therfore we need to reset this to the default value
+            // to be set, therefore we need to reset this to the default value
             // in order to avoid CUDA_ERROR_ILLEGAL_ADRESS errors
             cublasSetPointerMode(handle, CUBLAS_POINTER_MODE_HOST);
         });
@@ -182,7 +182,7 @@ inline void rotg(const char* func_name, Func func, sycl::queue& queue, sycl::buf
             cublasStatus_t err;
             cublas_native_named_func(func_name, func, err, handle, a_, b_, c_, s_);
             // Higher level BLAS functions expect CUBLAS_POINTER_MODE_HOST
-            // to be set, therfore we need to reset this to the default value
+            // to be set, therefore we need to reset this to the default value
             // in order to avoid CUDA_ERROR_ILLEGAL_ADRESS errors
             cublasSetPointerMode(handle, CUBLAS_POINTER_MODE_HOST);
         });
@@ -225,7 +225,7 @@ inline void rotm(const char* func_name, Func func, sycl::queue& queue, int64_t n
             cublasStatus_t err;
             cublas_native_named_func(func_name, func, err, handle, n, x_, incx, y_, incy, param_);
             // Higher level BLAS functions expect CUBLAS_POINTER_MODE_HOST
-            // to be set, therfore we need to reset this to the default value
+            // to be set, therefore we need to reset this to the default value
             // in order to avoid CUDA_ERROR_ILLEGAL_ADRESS errors
             cublasSetPointerMode(handle, CUBLAS_POINTER_MODE_HOST);
         });
@@ -296,7 +296,7 @@ inline void dot(const char* func_name, Func func, sycl::queue& queue, int64_t n,
             cublasStatus_t err;
             cublas_native_named_func(func_name, func, err, handle, n, x_, incx, y_, incy, res_);
             // Higher level BLAS functions expect CUBLAS_POINTER_MODE_HOST
-            // to be set, therfore we need to reset this to the default value
+            // to be set, therefore we need to reset this to the default value
             // in order to avoid CUDA_ERROR_ILLEGAL_ADRESS errors
             cublasSetPointerMode(handle, CUBLAS_POINTER_MODE_HOST);
         });
@@ -378,7 +378,7 @@ void sdsdot(sycl::queue& queue, int64_t n, float sb, sycl::buffer<float, 1>& x, 
             cublasStatus_t err;
             cublas_native_func(cublasSdot, err, handle, n, x_, incx, y_, incy, res_);
             // Higher level BLAS functions expect CUBLAS_POINTER_MODE_HOST
-            // to be set, therfore we need to reset this to the default value
+            // to be set, therefore we need to reset this to the default value
             // in order to avoid CUDA_ERROR_ILLEGAL_ADRESS errors
             cublasSetPointerMode(handle, CUBLAS_POINTER_MODE_HOST);
         });
@@ -420,7 +420,7 @@ inline void rotmg(const char* func_name, Func func, sycl::queue& queue, sycl::bu
             cublasStatus_t err;
             cublas_native_named_func(func_name, func, err, handle, d1_, d2_, x1_, y1_, param_);
             // Higher level BLAS functions expect CUBLAS_POINTER_MODE_HOST
-            // to be set, therfore we need to reset this to the default value
+            // to be set, therefore we need to reset this to the default value
             // in order to avoid CUDA_ERROR_ILLEGAL_ADRESS errors
             cublasSetPointerMode(handle, CUBLAS_POINTER_MODE_HOST);
         });
@@ -469,7 +469,7 @@ inline void iamax(const char* func_name, Func func, sycl::queue& queue, int64_t 
             // reference netlib BLAS.
             cublas_native_named_func(func_name, func, err, handle, n, x_, incx, int_res_);
             // Higher level BLAS functions expect CUBLAS_POINTER_MODE_HOST
-            // to be set, therfore we need to reset this to the default value
+            // to be set, therefore we need to reset this to the default value
             // in order to avoid CUDA_ERROR_ILLEGAL_ADRESS errors
             cublasSetPointerMode(handle, CUBLAS_POINTER_MODE_HOST);
         });
@@ -559,7 +559,7 @@ inline void iamin(const char* func_name, Func func, sycl::queue& queue, int64_t 
             // implemented as a reference IAMIN.
             cublas_native_named_func(func_name, func, err, handle, n, x_, incx, int_res_);
             // Higher level BLAS functions expect CUBLAS_POINTER_MODE_HOST
-            // to be set, therfore we need to reset this to the default value
+            // to be set, therefore we need to reset this to the default value
             // in order to avoid CUDA_ERROR_ILLEGAL_ADRESS errors
             cublasSetPointerMode(handle, CUBLAS_POINTER_MODE_HOST);
         });
@@ -611,7 +611,7 @@ inline void nrm2(const char* func_name, Func func, sycl::queue& queue, int64_t n
             // NRM2 does not support negative index
             cublas_native_named_func(func_name, func, err, handle, n, x_, std::abs(incx), res_);
             // Higher level BLAS functions expect CUBLAS_POINTER_MODE_HOST
-            // to be set, therfore we need to reset this to the default value
+            // to be set, therefore we need to reset this to the default value
             // in order to avoid CUDA_ERROR_ILLEGAL_ADRESS errors
             cublasSetPointerMode(handle, CUBLAS_POINTER_MODE_HOST);
         });
