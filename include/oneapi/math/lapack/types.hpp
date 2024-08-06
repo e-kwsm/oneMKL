@@ -33,7 +33,7 @@ namespace math {
 namespace lapack {
 namespace internal {
 
-// auxilary type aliases and forward declarations
+// auxiliary type aliases and forward declarations
 template <bool, typename T = void>
 struct enable_if;
 template <typename T>
@@ -43,7 +43,7 @@ struct is_rfp;
 template <typename T>
 struct is_cfp;
 
-// auxilary typechecking templates
+// auxiliary typechecking templates
 template <typename T>
 struct enable_if<true, T> {
     using type = T;
